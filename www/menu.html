@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/menu.css">
+
+  <!--Materialize.css-->
+  <link rel="stylesheet" href="css/materialize.css">
+
+  <!--Icons-->
+  <script src="js/icons.js"></script>
+
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@1,300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  
+    <title>GLF App</title>
+
+  <!--Jquery-->
+  <script src="js/jquery-1.9.1.min.js"></script>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+</head>
+<body>
+
+    <nav class="navbar" style="background-color: #00ac89;" id="navbar">
+        <img src="img/ERE_B.png" alt="GLF Logo" class="logo mx-auto">
+    </nav>
+
+    <div id="menu" class="tabcontent">
+
+    <h2>¡Bienvenido a GLF App!</h2>
+    <br>
+    <center><h3>Acerca de:</h3></center>
+    
+    <!--Carrusel-->
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+
+          <div class="carousel center-align">
+            <div class="carousel-item">
+              <h4 class="subtitulo">Conexión</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Conectar dispositivo</p>
+              <img src="img/Conexion.png" alt="">
+            </div>
+
+            <div class="carousel-item">
+              <h4 class="subtitulo">Humedad</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Sensor de humedad</p>
+              <img src="img/Humedad.png" alt="">
+            </div>
+
+            <div class="carousel-item">
+              <h4 class="subtitulo">Temperatura</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Sensor de temperatura</p>
+              <img src="img/Temperatura.png" alt="">
+            </div>
+
+            <div class="carousel-item">
+              <h4 class="subtitulo">Acceso a laboratorio</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Sensor PIR</p>
+              <img src="img/Doo.png" alt="">
+            </div>
+
+            <div class="carousel-item">
+              <h4 class="subtitulo">Humo</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Sensor de humo con sistema de alarma</p>
+              <img src="img/Fuego.png" alt="">
+            </div>
+
+            <div class="carousel-item">
+              <h4 class="subtitulo">Iluminación</h4>
+              <div class="linea-division"></div>
+              <p class="texto">Control de iluminación</p>
+              <img src="img/Luz.png" alt="">
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <!--Inicio de Pestañas-->
+
+    <!--Conexion-->
+    <div id="bluetooth" class="tabcontent">
+      <h2>Conexión Bluetooth</h2>
+      <center><img src="img/Conexion.png" alt="imagen" class="imagen"></center>
+
+      <center>
+      <h4><b>Status: </b><div id="statusDiv"></div></h4>
+      
+      <h4><b>Dispositivos: </b></h4>
+      </center>
+
+          <!--Bluetooth-->
+      <center>
+        <div id="mainPage">
+          <h6><ul id="deviceList"></h6>
+          </ul>
+          <center><a class="btn" id="refreshButton"><i class="fa-brands fa-bluetooth"></i> Recargar</a></center>
+      </div>
+      <div id="detailPage">
+          <div>
+              <center><a class="btn" id="sendButton"><i class="fa-brands fa-bluetooth"></i> Enviar</a></center>
+          </div>
+          <br>
+          <center><a class="btn" id="disconnectButton"><i class="fa-brands fa-bluetooth"></i> Desconectar</a></center>
+      </div>
+      <br>
+    </center>
+        <!--Fin conexion Bluetooth-->
+
+    </div>
+
+    <!--Humedad-->
+    <div id="humedad" class="tabcontent">
+    <h2>Humedad</h2>
+    <center><img src="img/Humedad.png" alt="imagen" class="imagen"></center>
+
+    <br>
+    <center><h4><div id="resultDiv1"></div></h4></center>
+
+    <br>
+    <center><a class="btn" id="mensaje"><i class="fa-solid fa-message"></i> Mostrar mensaje</a></center>
+    </div>
+
+    <!--Temperatura-->
+    <div id="ventilador" class="tabcontent">
+      <h2>Temperatura</h2>
+      <center><img src="img/Temperatura.png" alt="Temperatura" class="imagen"></center>
+      <br>
+      <center><h4><div id="resultDiv2"></div></h4></center>
+
+      <br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <center><a class="btn" id="cola"><i class="fa-solid fa-temperature-three-quarters"></i> Encender</a></center>
+          </div>
+          <div class="col">
+            <center><a class="btn" id="apagarven"><i class="fa-solid fa-temperature-three-quarters"></i> Apagar</a></center>
+          </div>
+        </div>
+    </div>
+    </div>
+
+    <!--Acceso a laboratorio-->
+    <div id="pir" class="tabcontent">
+      <h2>Acceso a laboratorio</h2>
+      <center><img src="img/Doo.png" alt="Puerta" class="imagen"></center>
+      <br>
+      <center><h4><div id="resultDiv3"></div></h4></center>
+
+      <br>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <center><a class="btn" id="abrir"><i class="fa-solid fa-door-open"></i> Abrir</a></center>
+          </div>
+          <div class="col">
+            <center><a class="btn" id="cerrar"><i class="fa-solid fa-door-closed"></i> Cerrar</a></center>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Humo-->
+    <div id="buzzer" class="tabcontent">
+    <h2>Sensor de humo</h2>
+    <center><img src="img/Fuego.png" alt="fuego" class="imagen"></center>
+    <br>
+    <center><h4><div id="resultDiv4"></div></h4></center>
+
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <center><a class="btn" id="activar"><i class="fa-solid fa-fire"></i> Activar</a></center>
+        </div>
+        <div class="col">
+          <center><a class="btn" id="desactivar"><i class="fa-solid fa-fire"></i> Desactivar</a></center>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--Iluminacion-->
+    <div id="luminosidad" class="tabcontent">
+    <h2>Iluminación</h2>
+    <center><img src="img/Luz.png" alt="Humedad" class="imagen"></center>
+    <br>
+    <center><h4><div id="resultDiv5"></div></h4></center>
+
+    <br>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <center><a class="btn" id="encendido"><i class="fa-solid fa-lightbulb"></i> Encender</a></center>
+        </div>
+        <div class="col">
+          <center><a class="btn" id="apagado"><i class="fa-regular fa-lightbulb"></i> Apagar</a></center>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <!--Fin de las pestañas-->
+
+    <!--Iconos de footer-->
+    <footer class="fixed">
+
+      <nav class="navbar" style="background-color: #00ac89;" id="navbar2">
+
+      <i class="fa-solid fa-joystick"></i>
+      <i onclick="pestaña(event, 'bluetooth')" class="fa-brands fa-bluetooth tablinks" id="icono"></i>
+
+      <i onclick="pestaña(event, 'humedad')" class="fa-solid fa-temperature-high tablinks" id="icono"></i>
+
+      <i onclick="pestaña(event, 'ventilador')" class="fa-solid fa-fan tablinks" id="icono"></i>
+
+      <i onclick="pestaña(event, 'menu')" class="fa-solid fa-house tablinks" id="icono defaultOpen"></i>
+
+      <i onclick="pestaña(event, 'pir')" class="fa-solid fa-door-open tablinks" id="icono"></i>
+        
+      <i onclick="pestaña(event, 'buzzer')" class="fa-solid fa-fire tablinks" id="icono"></i>
+
+      <i onclick="pestaña(event, 'luminosidad')" class="fa-solid fa-lightbulb tablinks" id="icono"></i>
+      <i class="fa-solid fa-joystick"></i>
+
+      </nav>
+    </footer>
+      <!--Fin de iconos de Footer--->
+
+
+      <!--Scripts-->
+      <script type="text/javascript">
+        function onDeviceReady(){
+        screen.orientation.lock('portrait-primary');
+        }
+        document.addEventListener('deviceready', function(){            onDeviceReady()
+        })
+      </script>
+      <!--Hide-->
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+      <script type="text/javascript">
+          function pestaña(evt, posicion) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace("active", "");
+              }
+              document.getElementById(posicion).style.display = "block"; evt.currentTarget.className += " active";
+          }
+          document.getElementById("icono defaultOpen").click();
+      </script>
+      <script type="text/javascript">
+          app.initialize();
+      </script>
+      <!--End hide-->
+
+    <!--Materialize.js-->
+    <script src="js/materialize.js"></script>
+
+    <!--Carousel-->
+    <script src="js/carousel.js"></script>
+
+    <!--Sticky-->
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      </script>
+      
+  </body>
+</html>

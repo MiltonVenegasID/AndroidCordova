@@ -1,0 +1,96 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    min-height: 100%;
+    position: relative;
+  }
+
+  body {
+    min-height: 100vh;
+    margin: 0;
+    margin-bottom: 40px;
+  }
+
+  
+.logo{
+    width: 80px;
+    height: 80px;
+}
+
+.hide {
+    display:none;
+}
+
+h2{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+  font-family: 'Noto Serif', serif;
+}
+
+h5{
+    color: black;
+}
+
+.subtitulo, h6{
+  font-family: 'Kanit', sans-serif;
+}
+
+statusDiv{
+  font-family: 'Kanit', sans-serif;
+}
+
+.texto, h4{
+  font-family: 'Zilla Slab', serif;
+}
+
+navbar{
+    flex: 0 0 auto;
+    overflow: hidden;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.fa-solid{
+  height: 25px;
+  font-size: 200%;
+}
+
+.fa-brands{
+  height: 25px;
+  font-size: 200%;
+}
+
+.linea-division{
+  width: 80%;
+  height: 2px;
+  background-color: black;
+}
+
+.carousel .carousel-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.imagen{
+  width: 50%;
+  height: 50%;
+}
