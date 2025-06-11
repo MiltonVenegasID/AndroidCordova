@@ -1,3 +1,4 @@
 SOON
 NOW
 NOT
+NOW
